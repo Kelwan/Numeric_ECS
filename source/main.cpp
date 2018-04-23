@@ -2,25 +2,29 @@
 #include "System.h"
 #include "components/component_library.h"
 
+
 #include <string>
 #include <iostream>
 
+// Can I initiate things outside of main? Ex: System?
+
+//Can namespace be used as a declaration to initiate
+//a class?
 namespace {
     Entity entity(1);
-    component_library* compLibrary;
-
-    System system; //Switched to upper case and it stopped giving me a C4430 error. What??
-
-    Component component1(compLibrary, "AddFive");
-    //Component component2(component2, "DoubleValue");
+    Component component1("AddFive");
+    System* gameSystem;
 }
+
 
 int main()
 {
 
-  //entity.addComponent(component1);
-  //entity.addComponent(component2);
 
+  //ecs::gameSystem->LOGGER();
+  entity.addComponent(component1);
+  //entity.addComponent(component2);
+  entity.checkAccess();
   //entity.printComponents();
 
 

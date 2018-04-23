@@ -1,4 +1,4 @@
-#pragma once
+
 
 #include "Entity.h"
 
@@ -26,4 +26,9 @@ void Entity::printComponents()
   {
     std::cout << components[i].name << std::endl;
   }
+}
+
+void Entity::checkAccess()
+{
+
 }

@@ -2,7 +2,7 @@
 #define Component_h
 
 #include <string>
-#include "components/component_library.h"
+#include "System.h"
 
 
 class Component
@@ -13,15 +13,13 @@ public:
   std::string name;
   int componentNum;
 
-  Component(component_library* compLibrary, std::string nameType);
+  Component(std::string nameType);
   ~Component();
 
 
 
-
-
 private:
-  int signature;
+  //int signature;
 
 
 };

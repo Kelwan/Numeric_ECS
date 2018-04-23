@@ -2,7 +2,7 @@
 #include "Component.h"
 
 
-Component::Component(component_library* compLibrary, std::string nameType)
+Component::Component(std::string nameType)
 {
   name = nameType;
 
