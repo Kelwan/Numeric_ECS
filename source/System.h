@@ -35,6 +35,7 @@ public:
 private:
   //How do I use template with vectors?
   //It seems complicated to pass its argument around
+  //Below is the only one I got to work
   template<typename T>
   class StoreEntities
   {

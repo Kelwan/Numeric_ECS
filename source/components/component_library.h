@@ -1,8 +1,9 @@
-#ifndef component_library_h
-#define component_library_h
+#ifndef COMPONENT_LIBRARY_H
+#define COMPONENT_LIBRARY_H
 
-#include "AddFive.h"
-#include "DoubleValue.h"
+
+#include "component_struct.h"
+
 #include <string>
 #include <vector>
 
@@ -20,13 +21,15 @@ public:
   component_library();
   ~component_library();
 
-  //std::vector<T>componentList;
-
 private:
   //Components to be added to component list
-  AddFive AddFive;
-  DoubleValue DoubleValue;
 
 };
+
+namespace component_list
+{
+  template<typename T>
+  typename std::vector<T> CompArray;
+}
 
 #endif

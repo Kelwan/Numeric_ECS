@@ -20,7 +20,7 @@ namespace {
 int main()
 {
 
-
+  gameSystem->LOGGER();
   //ecs::gameSystem->LOGGER();
   entity.addComponent(component1);
   //entity.addComponent(component2);
