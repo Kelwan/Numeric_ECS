@@ -7,24 +7,17 @@
 #include "Component.h"
 #include "components/component_library.h"
 
-// How do I pass a system effectively without constantly
-// Sending via function / declaring it in main?
+
+//System don't hold entities, just process them
 
 
-//AKA Self-initiating global system?
-
-//Why use namespaces??
 
 class System {
 public:
   System();
   ~System();
 
-    //void checkComponentSignature(int signature, Component component);
-
-    // I include 'Component', but I can't make
-    //Declaratons of it in function arguments
-    //But I can in Entity?
+    void checkComponentSignature(int signature, Component component);
 
   component_library compLibrary;
 
@@ -32,7 +25,7 @@ public:
   void LOGGER();
 
 
-private:
+// private:
   //How do I use template with vectors?
   //It seems complicated to pass its argument around
   //Below is the only one I got to work
@@ -40,17 +33,25 @@ private:
   class StoreEntities
   {
   public:
-    typename std::vector<T>EntityList;
+    std::vector<T> EntityList;
   };
-
 
 
 
 
 };
 
-//System* gameSystem;
-//ecs::System* gameSystem;
+//Inherit root system and create a separate root folder
+class GravitySystem : public System {
+  //Do the implemtation
+  //friend Component
+};
+
+class CollisionSystem : public System {
+
+};
+
+
 
 
 #endif

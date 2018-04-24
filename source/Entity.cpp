@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+// Entity myGlobalEntity(1);
+
 Entity::Entity(int value)
 {
   userNumber = value;

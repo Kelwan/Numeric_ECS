@@ -1,5 +1,5 @@
-#ifndef Entity_h
-#define Entity_h
+#ifndef ENTITY_H
+#define ENTITY_H
 
 #include <iostream>
 #include <vector>
@@ -23,7 +23,9 @@ private:
   std::vector<Component> components;
   int userNumber;
   uint32_t signature = 0;
-  
+
 };
+
+//extern Entity myGlobalEntity;
 
 #endif

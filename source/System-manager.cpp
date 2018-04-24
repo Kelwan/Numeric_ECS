@@ -7,10 +7,10 @@
 System::System() {}
 System::~System() {}
 
-//void System::checkComponentSignature(int signature, Component component)
-//{
+void System::checkComponentSignature(int signature, Component component)
+{
 
-//}
+}
 
 void System::init()
 {

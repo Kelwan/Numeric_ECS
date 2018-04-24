@@ -7,8 +7,7 @@
 #include <string>
 #include <vector>
 
-//Not sure how to make template communicate with the
-//.cpp file. Errors everywhere!
+
 
 //Want a template to allow my private component functions
 //To be stored in a vector under a universal type
@@ -22,9 +21,19 @@ public:
   ~component_library();
 
 private:
+
+
+  template<typename T>
+  inline void getNum();
   //Components to be added to component list
 
 };
+
+// Mess with implementaion
+template<typename T>
+void component_library::getNum() {
+
+}
 
 namespace component_list
 {

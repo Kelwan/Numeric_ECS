@@ -1,9 +1,7 @@
-#ifndef Component_h
-#define Component_h
+#ifndef COMPONENT_H
+#define COMPONENT_H
 
 #include <string>
-#include "System.h"
-
 
 class Component
 {
@@ -25,4 +23,4 @@ private:
 };
 
 
-#endif
+#endif//COMPONENT_H
