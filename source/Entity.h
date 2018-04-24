@@ -23,7 +23,7 @@ private:
   std::vector<Component> components;
   int userNumber;
   uint32_t signature = 0;
-
+  
 };
 
 #endif
