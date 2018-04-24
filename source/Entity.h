@@ -4,8 +4,9 @@
 #include <iostream>
 #include <vector>
 #include <cstdint>
+#include <type_traits>
 
-#include "Component.h"
+#include "component/Component.h"
 
 class Entity
 {
@@ -14,9 +15,14 @@ public:
   Entity(int value);
   ~Entity();
 
-  void addComponent(Component component); //You need a pointer/reference to pass objects?
+  //Template add component w/ is_base_of inline.
+  void addComponent(Component component);
   void printComponents();
   void checkAccess();
+
+
+// Avoid object slicing, use is_base_of to find root class
+
 
 private:
 

@@ -8,11 +8,13 @@ class Component
 
 public:
 
+  Component();
+  ~Component();
+
   std::string name;
   int componentNum;
 
-  Component(std::string nameType);
-  ~Component();
+
 
 
 

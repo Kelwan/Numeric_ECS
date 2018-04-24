@@ -1,18 +1,12 @@
 #ifndef COMPONENT_LIBRARY_H
 #define COMPONENT_LIBRARY_H
 
-
-#include "component_struct.h"
-
 #include <string>
 #include <vector>
 
+#include "component_type/health.h"
 
 
-//Want a template to allow my private component functions
-//To be stored in a vector under a universal type
-
-//template <class T>
 class component_library
 {
 
@@ -22,14 +16,13 @@ public:
 
 private:
 
-
+  //Inline template example
   template<typename T>
   inline void getNum();
-  //Components to be added to component list
 
 };
 
-// Mess with implementaion
+// Mess with implementaion ex #2
 template<typename T>
 void component_library::getNum() {
 
@@ -38,7 +31,7 @@ void component_library::getNum() {
 namespace component_list
 {
   template<typename T>
-  typename std::vector<T> CompArray;
+  std::vector<T> CompArray;
 }
 
 #endif
