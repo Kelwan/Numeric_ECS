@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <cstdint>
+#include <string>
 
 #include "../component/component_library.h"
 #include "../Entity.h"
@@ -17,15 +18,15 @@ public:
   System();
   ~System();
 
-
-  void process_entity();
-
+  std::string name;
 
 
 
-};
+  void process_entity(Entity entity);
+  void process_entity(Entity entity, Component target);
 
-class CollisionSystem : public System {
+
+
 
 };
 

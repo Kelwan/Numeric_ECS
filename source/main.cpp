@@ -14,29 +14,32 @@
 
 namespace {
   Entity entity(1);
-  health PlayerHealth(100);
+  health player_health(100);
 }
 
 class Test {
 public:
 
   Test() {
-    std::cout << "Test Constructor" << std::endl;
+    std::cout << "Test enabled!" << std::endl;
   }
 
   ~Test() {
-    std::cout << "Test Destructor" << std::endl;
   }
 };
 
 int main()
 {
+  //Test test;
 
-  std::cout << PlayerHealth.getHealth() << std::endl;
+  std::cout << player_health.getHealth() << std::endl;
+  // I can't get static_assert to trigger correctly
+  // because of errors lol
+  entity.add_component<health>(player_health);
+
+  entity.printComponents();
 
   //myGlobalEntity.printComponents();
-
-  // Game game;
 
   // //Add Death collector system. ex: if hp < 0 killEntity
 
@@ -63,7 +66,7 @@ int main()
 
   //entity.addComponent(component1);
   //entity.addComponent(component2);
-  entity.checkAccess();
+  //entity.checkAccess();
   //entity.printComponents();
 
 }
