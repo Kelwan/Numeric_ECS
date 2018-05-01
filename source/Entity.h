@@ -26,6 +26,7 @@ public:
 
     components.push_back(component);
   };
+
   void printComponents();
 
 
@@ -35,6 +36,7 @@ public:
 private:
 
   std::vector<Component> components;
+
   int userNumber;
   uint32_t signature = 0;
 

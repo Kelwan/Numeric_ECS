@@ -20,12 +20,10 @@ public:
 
   std::string name;
 
-
-
   void process_entity(Entity entity);
   void process_entity(Entity entity, Component target);
 
-
+  
 
 
 };

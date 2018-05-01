@@ -4,7 +4,6 @@ class poison : public System{
 
 public:
 
-
   int level;
   int damage;
 
@@ -15,5 +14,7 @@ public:
 
   int get_level();
   int get_damage();
+
+
 
 };
