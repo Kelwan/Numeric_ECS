@@ -37,7 +37,7 @@ int main()
   std::cout << player_health.getHealth() << std::endl;
 
 
-  entity.add_component<health>(100);
+  //entity.add_component<health>(100);
   entity.printComponents();
 
 

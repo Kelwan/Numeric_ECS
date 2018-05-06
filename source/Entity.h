@@ -20,11 +20,8 @@ public:
   void _addcomponent(std::string nameType,
     Component_Container* componentContainer);
 
-// Put back if necessary
-//inline void add_component (/*ctorArgsT... ctorArgs*/)
+    
 
-  //Why a Component_base instance?
-  //Template add component w/ is_base_of inline.
   template<typename componentT, typename ...ctorArgsT>
   inline auto add_component (ctorArgsT... ctorArgs)
   {
