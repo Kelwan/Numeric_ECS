@@ -28,33 +28,25 @@ public:
   }
 };
 
+
+
 int main()
 {
   //Test test;
 
   std::cout << player_health.getHealth() << std::endl;
-  // I can't get static_assert to trigger correctly
-  // because of errors lol
-  entity.add_component<health>(player_health);
 
+
+  entity.add_component<health>(100);
   entity.printComponents();
 
-  //myGlobalEntity.printComponents();
+
 
   // //Add Death collector system. ex: if hp < 0 killEntity
 
   // Entity myPlayerEntity;
   // myPlayerEntity.add_component(PositionComponent{0.f, 10.f, 0.f});
-  //
-  // game.add_entity(myPlayerEntity);
 
-  // for(;;) {
-  //   bool shouldQuit = game.run();
-  //
-  //   if(shouldQuit) {
-  //     break;
-  //   }
-  // }
 
 //  System::StoreEntities<int> storeEntities;
 
@@ -62,11 +54,5 @@ int main()
 
   //std::cout << "Hey: " << storeEntities.EntityList[0] << std::endl;
 
-
-
-  //entity.addComponent(component1);
-  //entity.addComponent(component2);
-  //entity.checkAccess();
-  //entity.printComponents();
 
 }

@@ -2,7 +2,7 @@
 #include "Component.h"
 
 
-Component::Component()
+Component::Component() : Component_Container()
 {
 
 

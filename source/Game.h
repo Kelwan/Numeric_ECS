@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <memory>
+#include "./system/System.h"
 
 
 class Game {
@@ -17,7 +18,10 @@ public:
 
   bool run();
 
+private:
 
+  std::vector<System> store_systems;
+  std::vector<Entity> store_entities;
 
 
 };

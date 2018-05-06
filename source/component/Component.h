@@ -3,7 +3,11 @@
 
 #include <string>
 
-class Component
+
+struct Component_Container {};
+
+
+class Component : public Component_Container
 {
 
 public:
@@ -14,6 +18,8 @@ public:
   std::string name;
   int componentNum;
 
+
+  //std::string& get_component_name();
 
 
 

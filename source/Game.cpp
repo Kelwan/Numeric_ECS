@@ -19,4 +19,4 @@ void Game::add_entity()
 {}
 
 bool Game::run()
-{}
+{ return true; }

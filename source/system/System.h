@@ -21,10 +21,9 @@ public:
   std::string name;
 
   void process_entity(Entity entity);
-  void process_entity(Entity entity, Component target);
+  Component* search_for_component_type(Entity entity, Component& target);
 
-  
-
+  friend Entity::Entity(int value);
 
 };
 
