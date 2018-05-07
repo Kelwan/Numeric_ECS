@@ -7,6 +7,11 @@ public:
   int level;
   int damage;
 
+  static inline const std::string get_component_name()
+  {
+    return "poison";
+  }
+
   poison(int poison_level);
   ~poison();
 

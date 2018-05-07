@@ -1,7 +1,8 @@
 #include "Entity.h"
-#include "system/System.h"
+#include "./system/System.h"
+#include "./system/System_Manager.h"
 #include "component/component_library.h"
-
+#include "./system/system_type/poison.h"
 
 
 #include <string>
@@ -15,6 +16,7 @@
 namespace {
   Entity entity(1);
   health player_health(100);
+  System_Manager system_manager;
 }
 
 class Test {
@@ -37,8 +39,11 @@ int main()
   std::cout << player_health.getHealth() << std::endl;
 
 
-  //entity.add_component<health>(100);
+  entity.add_component<health>(100);
   entity.printComponents();
+
+  system_manager.add_system<poison>(2);
+  system_manager.print_systems();
 
 
 
