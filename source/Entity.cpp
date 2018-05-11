@@ -19,13 +19,23 @@ Entity::~Entity()
 
 void Entity::printComponents()
 {
-  for(int i = 0; i < components.size(); i++)
+  for(auto it = components.begin(); it != components.end(); it++)
   {
-    //std::cout << components[i]->name << std::endl;
+    auto& component = *it;
+    std::cout << "Component name is: " << component->get_component_name()
+    << std::endl;
   }
+
+  //for(auto& component : entity.components) {
+
+	//}
+
 }
 
-void Entity::_addcomponent(std::string name, Component_Container* componentContainer)
+
+//If I use Component_Container (base component class) as my argument, it
+//won't recognize name as a value. Is object slicing occuring??
+void Entity::_addcomponent(std::string name, Component* componentContainer)
 {
   components.push_back(componentContainer);
 }

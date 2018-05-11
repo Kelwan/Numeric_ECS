@@ -4,6 +4,7 @@
 health::health(int baseHealth) : Component()
 {
   currentHealth = baseHealth;
+  name = "health";
 }
 
 health::~health()

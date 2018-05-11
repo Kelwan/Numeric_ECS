@@ -18,9 +18,9 @@ public:
   //void add_component();
 
   void _addcomponent(std::string nameType,
-    Component_Container* componentContainer);
+    Component* componentContainer);
 
-    
+
 
   template<typename componentT, typename ...ctorArgsT>
   inline auto add_component (ctorArgsT... ctorArgs)
@@ -38,10 +38,10 @@ public:
 
 private:
 
-  std::vector<Component_Container*> components;
+  std::vector<Component*> components;
 
   int userNumber;
-  uint32_t signature = 0;
+  uint32_t entity_id = 0;
 
 };
 

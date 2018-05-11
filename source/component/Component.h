@@ -15,17 +15,16 @@ public:
   Component();
   ~Component();
 
+
+
   std::string name;
-  int componentNum;
 
-
-  //std::string& get_component_name();
 
 
 
 
 private:
-  //int signature;
+  //Uint32 component_id;
 
 
 };
