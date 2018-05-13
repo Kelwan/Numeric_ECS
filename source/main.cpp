@@ -45,6 +45,12 @@ int main()
   system_manager.add_system<poison>(2);
   system_manager.print_systems();
 
+  //for(System& system : system_manager.systems) {
+    //for(Entity& entity : allTheEntities) {
+      //system.process_entity(entity);
+    //}
+  //}
+
 
 
   // //Add Death collector system. ex: if hp < 0 killEntity

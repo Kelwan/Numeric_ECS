@@ -20,14 +20,17 @@ inline auto add_system(systemArgsT... systemArgs)
     "systemT does not derive from base System"
   );
 
+  _addsystem(new systemT{systemArgs...});
+
 };
+
 
   void print_systems();
 
 
 private:
-  void _addsystem(System* storeSystem);
 
+  void _addsystem(System* storeSystem);
   std::vector<System*> stored_systems;
 
 

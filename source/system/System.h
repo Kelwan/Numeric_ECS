@@ -14,20 +14,24 @@
 
 
 class System {
+
 public:
   System();
   ~System();
 
   std::string name;
-
+  
+ 
   void process_entity(Entity entity);
-  Component* search_for_component_type(Entity entity, Component& target);
-
-  friend Entity::Entity(int value);
+  Component_Container* search_for_component_type(Entity entity, std::string target);
 
 
+  std::vector<std::string> components_for_process;
+
+  virtual void process(Entity& entity, std::vector<Component*> components) = 0;
 
 
+  //=0 means if you have a derived class that doesn't implement the function, it will give an error.
 };
 
 

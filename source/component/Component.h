@@ -4,10 +4,7 @@
 #include <string>
 
 
-struct Component_Container {};
-
-
-class Component : public Component_Container
+class Component
 {
 
 public:
@@ -17,15 +14,18 @@ public:
 
 
 
-  std::string name;
-
-
-
-
 
 private:
   //Uint32 component_id;
 
+
+};
+
+struct Component_Container {
+  Component_Container(std::string nameType, Component* component);
+
+  std::string nameType;
+  Component* component;
 
 };
 

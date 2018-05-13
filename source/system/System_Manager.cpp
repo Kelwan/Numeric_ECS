@@ -11,8 +11,9 @@ void System_Manager::print_systems()
   int i = 0;
 
   for(auto it = stored_systems.begin();
-    it != stored_systems.end(); it++, i++)
+    it != stored_systems.end(); it++)
   {
-    std::cout << stored_systems[i]->name << std::endl;
+    auto system_search = *it;
+    std::cout << "System name: " <<  stored_systems[i]->name << std::endl;
   }
 }

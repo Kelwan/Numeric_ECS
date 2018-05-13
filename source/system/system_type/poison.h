@@ -20,6 +20,14 @@ public:
   int get_level();
   int get_damage();
 
+  //If you don't re-declare process, it will give an error because of =0 abstraction
+
+
+  virtual void process(Entity& entity, std::vector<Component*> components) override/*, final*/;
+
+  //If you specify override, it will SPECIFICALLY search the base classes for the virtual function
+  //Look up final for more info
+
 
 
 };

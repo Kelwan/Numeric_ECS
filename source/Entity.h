@@ -15,10 +15,12 @@ public:
   Entity(int value);
   ~Entity();
 
+  friend class System;
+
   //void add_component();
 
   void _addcomponent(std::string nameType,
-    Component* componentContainer);
+    Component* component);
 
 
 
@@ -34,11 +36,15 @@ public:
 
   void printComponents();
 
+
 // Avoid object slicing, use is_base_of to find root class
 
 private:
 
-  std::vector<Component*> components;
+  std::vector<Component_Container*> components;
+
+  //Component_Container new_component_vector = *components[0];
+  //Component_Container* new_component_vector_pointer = &new_component_vector;
 
   int userNumber;
   uint32_t entity_id = 0;

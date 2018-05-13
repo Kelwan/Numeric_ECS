@@ -20,6 +20,8 @@ public:
 
 private:
 
+
+  //void duplicate_entity();
   std::vector<System> store_systems;
   std::vector<Entity> store_entities;
 
