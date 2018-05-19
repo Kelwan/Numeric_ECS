@@ -14,9 +14,7 @@ public:
     ~Entity_Manager();
 
     void add_entity(Entity& entity);
-    void print_entities();
-    
-    //How do I send _iterator without using a void 'get' function? Is it possible?;
+    //void print_entities();
 
 
 private:

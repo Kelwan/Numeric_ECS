@@ -1,4 +1,6 @@
-#include "../System.h"
+#pragma once
+
+#include "./source/core/core.h"
 
 class poison : public System{
 

@@ -18,22 +18,6 @@ void System_Manager::print_systems()
   }
 }
 
-//template<typename systemT>
-//void System_Manager::process_entity(Entity entity)
-//{
-
-    // @NOTEs from zeke:
-  // 1) Find all the components on the entity that apply to this system.
-  // 2) Invoke a virtual method with those components and the entity so
-  //    that derived systems can process them.
-
-  // Ex: Applying poison to health.
-
-  //for(std::string desired_components, )
-
-
-//}
-
 void System_Manager::_processentity(Entity& entity, System* system_process)
 {
   Component_Container* component_container = nullptr;

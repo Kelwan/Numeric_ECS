@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "../Component.h"
+#include "./source/core/core.h"
 
 class health : public Component
 {

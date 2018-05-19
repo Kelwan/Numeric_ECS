@@ -7,7 +7,7 @@
 #include <type_traits>
 #include <atomic>
 
-#include "component/Component.h"
+#include "./source/core/component/Component.h"
 
 
 namespace iterator
@@ -28,11 +28,9 @@ public:
   friend class System_Manager;
   friend class System;
 
-  //void add_component();
 
   void _addcomponent(std::string nameType,
     Component* component);
-
 
 
   template<typename componentT, typename ...ctorArgsT>
@@ -48,19 +46,14 @@ public:
   void printComponents();
 
 
-// Avoid object slicing, use is_base_of to find root class
 
 private:
 
   std::vector<Component_Container*> components;
 
-  //Component_Container new_component_vector = *components[0];
-  //Component_Container* new_component_vector_pointer = &new_component_vector;
 
   iterator::entity_id _entityid = 0;
 
 };
-
-//extern Entity myGlobalEntity;
 
 #endif

@@ -34,16 +34,6 @@ _addsystem(new systemT{systemArgs...});
       }
 
     }
-    //if(system_process != nullptr)
-    //{
-      //_processentity(entity, system_process);
-    //}
-
-    //else()
-    //{
-      //std::cout << "process_entity system is undefined" << std::endl;
-    //}
-
     
   };
 

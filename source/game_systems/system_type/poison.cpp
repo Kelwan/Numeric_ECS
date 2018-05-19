@@ -1,5 +1,5 @@
 #include "poison.h"
-#include "source/component/component_type/health.h"
+#include "source/game_systems/component_type/health.h"
 #include <iostream>
 
 poison::poison(int poison_init) : System()

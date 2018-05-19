@@ -5,12 +5,7 @@
 #include <cstdint>
 #include <string>
 
-#include "../component/component_library.h"
-#include "../Entity.h"
-
-
-//System don't hold entities, just process them
-
+#include "./source/core/entity/Entity.h"
 
 
 class System {
@@ -28,11 +23,7 @@ public:
 
   virtual void process(Entity& entity, std::vector<Component_Container*> components) = 0;
 
-
-  //=0 means if you have a derived class that doesn't implement the function, it will give an error.
 };
-
-
 
 
 #endif
