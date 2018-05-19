@@ -3,6 +3,8 @@
 #include <vector>
 #include <memory>
 #include "./system/System.h"
+#include "Entity_Manager.h"
+#include "./system/System_Manager.h"
 
 
 class Game {
@@ -10,20 +12,23 @@ public:
   Game();
   ~Game();
 
-//  std::vector<System> systems;
-//  std::vector<Entity> entities;
-
   void add_system();
   void add_entity();
 
   bool run();
 
+  System_Manager system_manager;
+  Entity_Manager entity_manager;
+
+  void frameRate();
+
+
 private:
 
 
-  //void duplicate_entity();
-  std::vector<System> store_systems;
-  std::vector<Entity> store_entities;
 
+  //void duplicate_entity();
+  std::vector<System*> stored_systems;
+  std::vector<Entity> stored_entities;
 
 };

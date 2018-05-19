@@ -1,4 +1,6 @@
 #include "poison.h"
+#include "source/component/component_type/health.h"
+#include <iostream>
 
 poison::poison(int poison_init) : System()
 {
@@ -16,11 +18,13 @@ poison::~poison()
 }
 
 
-void poison::process(Entity& entity, std::vector<Component*> components)
+void poison::process(Entity& entity, std::vector<Component_Container*> components)
 {
-  // Component* firstComponent = components[1];
-  //health* healthComponent = reinterpret_cast<health*>(firstComponent);
-  //health->subtractHealth(30);
+  Component* component = components[0]->component;
+
+  auto* healthComponent = reinterpret_cast<health*>(component);
+  healthComponent->subtractHealth(this->get_damage());
+  std::cout << healthComponent->getHealth() << std::endl;
 }
 
 void poison::apply(Entity entity)

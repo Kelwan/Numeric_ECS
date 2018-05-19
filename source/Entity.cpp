@@ -7,9 +7,9 @@
 
 // Entity myGlobalEntity(1);
 
-Entity::Entity(int value)
+Entity::Entity()
 {
-  userNumber = value;
+  
 }
 
 Entity::~Entity()
@@ -30,7 +30,6 @@ void Entity::printComponents()
 	//}
 
 }
-
 
 //If I use Component_Container (base component class) as my argument, it
 //won't recognize name as a value. Is object slicing occuring??

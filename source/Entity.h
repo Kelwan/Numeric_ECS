@@ -5,16 +5,27 @@
 #include <vector>
 #include <cstdint>
 #include <type_traits>
+#include <atomic>
 
 #include "component/Component.h"
+
+
+namespace iterator
+{
+  using entity_id = uint32_t;
+}
+
+class System_Manager;
+class System;
 
 class Entity
 {
 
 public:
-  Entity(int value);
+  Entity();
   ~Entity();
 
+  friend class System_Manager;
   friend class System;
 
   //void add_component();
@@ -46,8 +57,7 @@ private:
   //Component_Container new_component_vector = *components[0];
   //Component_Container* new_component_vector_pointer = &new_component_vector;
 
-  int userNumber;
-  uint32_t entity_id = 0;
+  iterator::entity_id _entityid = 0;
 
 };
 

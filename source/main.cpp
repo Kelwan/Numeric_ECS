@@ -1,8 +1,11 @@
 #include "Entity.h"
 #include "./system/System.h"
 #include "./system/System_Manager.h"
-#include "component/component_library.h"
+#include "Entity_Manager.h"
 #include "./system/system_type/poison.h"
+#include "./component/component_type/health.h"
+
+#include "Game.h"
 
 
 #include <string>
@@ -13,57 +16,47 @@
 //Can namespace be used as a declaration to initiate
 //a class?
 
+//More things to add:
+//You need something to hold systems
+//Something to hold entities(Entity manager)
+//Something holding systems and entities (the managers themselves) -> Game
+//When I make a system, it automatically is added by 'game' <- Don't do this!
+//system_manager->add_system();
+
+
 namespace {
-  Entity entity(1);
+  Entity player;
   health player_health(100);
-  System_Manager system_manager;
+  Game simpleGame;
 }
 
-class Test {
-public:
 
-  Test() {
-    std::cout << "Test enabled!" << std::endl;
-  }
-
-  ~Test() {
+class print_components_system : public System {
+  virtual inline void process
+    ( Entity&                           entity
+    , std::vector<Component_Container*> components
+    ) override
+  {
+    entity.printComponents();
   }
 };
 
 
-
 int main()
 {
-  //Test test;
 
-  std::cout << player_health.getHealth() << std::endl;
+  player.add_component<health>(100);
 
-
-  entity.add_component<health>(100);
-  entity.printComponents();
-
-  system_manager.add_system<poison>(2);
-  system_manager.print_systems();
-
-  //for(System& system : system_manager.systems) {
-    //for(Entity& entity : allTheEntities) {
-      //system.process_entity(entity);
-    //}
-  //}
+  simpleGame.entity_manager.add_entity(player);
+  simpleGame.system_manager.add_system<poison>(2);
+  simpleGame.system_manager.add_system<print_components_system>();
 
 
+while(1)
+{
+  simpleGame.run();
+}
+  
 
-  // //Add Death collector system. ex: if hp < 0 killEntity
-
-  // Entity myPlayerEntity;
-  // myPlayerEntity.add_component(PositionComponent{0.f, 10.f, 0.f});
-
-
-//  System::StoreEntities<int> storeEntities;
-
-  //storeEntities.EntityList.push_back(24);
-
-  //std::cout << "Hey: " << storeEntities.EntityList[0] << std::endl;
-
-
+  return 0;
 }
