@@ -1,5 +1,5 @@
-#ifndef ENTITY_H
-#define ENTITY_H
+#pragma once
+
 
 #include <iostream>
 #include <vector>
@@ -56,4 +56,3 @@ private:
 
 };
 
-#endif

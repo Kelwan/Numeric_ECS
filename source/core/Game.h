@@ -1,8 +1,6 @@
 #pragma once
 
-#include <vector>
 #include <memory>
-#include "./system/System.h"
 #include "./entity/Entity_Manager.h"
 #include "./system/System_Manager.h"
 

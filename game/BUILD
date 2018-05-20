@@ -3,6 +3,6 @@ cc_binary(
     srcs = glob(["**/*.cpp", "**/*.h", "**/*.hpp"]),
     deps = 
     [
-        "//source/core:ecs_core"
+        "//source/game_systems:ecs_game_systems"
     ],
 )
