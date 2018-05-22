@@ -6,6 +6,5 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "//source/core:ecs_core",
-        "@sdl2//:SDL2",
     ],
 )
