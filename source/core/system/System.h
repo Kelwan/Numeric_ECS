@@ -16,7 +16,7 @@ public:
 
   std::string name;
 
-  Component_Container* search_for_component_type(Entity entity, std::string target);
+  Component_Container* search_for_component_type(Entity entity, std::string target, int& component_count);
 
 
   std::vector<std::string> components_for_process;

@@ -3,18 +3,18 @@
 
 #include "./source/core/core.h"
 
-class health : public Component
+class health_component : public Component
 {
 public:
-  health(int baseHealth);
-  ~health();
+  health_component(int baseHealth);
+  ~health_component();
 
   int getHealth();
 
 
   static inline const std::string get_component_name()
   {
-    return "health";
+    return "health_component";
   }
 
   void setHealth(int healthSet);

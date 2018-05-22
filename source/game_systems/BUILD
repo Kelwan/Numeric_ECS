@@ -5,6 +5,7 @@ cc_library(
     srcs = glob(["**/*.h"]) + glob(["**/*.cpp"]),
     visibility = ["//visibility:public"],
     deps = [
-        "//source/core:ecs_core"
+        "//source/core:ecs_core",
+        "@sdl2//:SDL2",
     ],
 )

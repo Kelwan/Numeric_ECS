@@ -2,22 +2,18 @@
 
 #include "./source/core/core.h"
 
-class poison : public System{
+class poison_system : public System{
 
 public:
 
   int level;
   int damage;
 
-  static inline const std::string get_component_name()
-  {
-    return "poison";
-  }
 
-  poison(int poison_level);
-  ~poison();
+  poison_system(int poison_level);
+  ~poison_system();
 
-  void apply(Entity entity);
+
 
   int get_level();
   int get_damage();
