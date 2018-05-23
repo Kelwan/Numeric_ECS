@@ -52,6 +52,7 @@
         "functional": "cpp",
         "ratio": "cpp",
         "xthread": "cpp",
-        "xfunctional": "cpp"
+        "xfunctional": "cpp",
+        "mutex": "cpp"
     }
 }

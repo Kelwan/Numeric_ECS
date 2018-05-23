@@ -1,4 +1,4 @@
-
+#pragma once
 
 #include "./entity/Entity_Manager.h"
 #include "./system/System_Manager.h"

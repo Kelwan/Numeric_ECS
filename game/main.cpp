@@ -2,13 +2,21 @@
 
 //#include <ecs/core/core.h>
 #include <ecs/game/game_system.h>
+#include <ecs/game/SDL_core.h>
 
-int main()
+
+class SDL_Game : public Game
+{
+public:
+    SDL_Main sdl;
+};
+
+
+int main(int argc, char* argv[])
 {
 
-    Game simpleGame;
 
-
+    SDL_Game simpleGame;
     Entity player;
     Entity rock;
 
@@ -28,6 +36,13 @@ int main()
     simpleGame.system_manager.process_entity(player);
     
     simpleGame.system_manager.process_entity(rock);
+
+    simpleGame.sdl.init("simpleGame", 100, 100, 640, 480);
+    simpleGame.sdl.render();
+
+    simpleGame.sdl.delay(2000);
+
+    
 
 
 

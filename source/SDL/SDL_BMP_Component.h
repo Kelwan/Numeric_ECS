@@ -6,6 +6,8 @@ class SDL_BMP_Component : public Component
 public:
 
     SDL_Surface* surface = nullptr;
+    SDL_Texture* texture = nullptr;
+
 
     SDL_BMP_Component(const char* bmp_to_load);
 
@@ -15,7 +17,5 @@ public:
     }
 
     void changeSurface(const char* new_bmp_to_load);
-
-
 
 };

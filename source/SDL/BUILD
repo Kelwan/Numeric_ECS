@@ -1,9 +1,11 @@
 cc_library(
-    name = "SDL",
+    name = "SDL_Core",
     include_prefix = "ecs/game",
-    hdrs = glob(["**/*.h"]) + glob(["**/*.cpp"]),
+    hdrs = glob(["**/*.h"]),
+    srcs = glob(["**/*.h"]) + glob(["**/*.cpp"]),
     visibility = ["//visibility:public"],
     deps = [
         "@sdl2//:SDL2",
+        "//source/core:ecs_core",
     ],
 )
