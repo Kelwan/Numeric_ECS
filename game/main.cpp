@@ -23,6 +23,7 @@ int main(int argc, char* argv[])
 
     player.add_component<health_component>(100);
     player.add_component<poison_component>();
+    player.add_component<position_component>(20.0f, 20.0f);
 
     player.printComponents();
 

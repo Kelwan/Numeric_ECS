@@ -5,6 +5,7 @@
 
 #include "./component_type/health_component.h"
 #include "./component_type/poison_component.h"
+#include "./component_type/position_component.h"
 
 
 
