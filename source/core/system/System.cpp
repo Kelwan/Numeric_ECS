@@ -8,7 +8,7 @@ System::~System() {}
 
 
 
-Component_Container* System::search_for_component_type(Entity& entity, std::string target, int& component_count)
+Component_Container* System::search_for_component_type(Entity& entity, std::string target)
 {
   Component_Container* returnComponent = nullptr;
 
@@ -17,7 +17,6 @@ Component_Container* System::search_for_component_type(Entity& entity, std::stri
   {
     if(component_container->nameType == target)
     {
-      component_count++;
       returnComponent = component_container;
       break;
     }

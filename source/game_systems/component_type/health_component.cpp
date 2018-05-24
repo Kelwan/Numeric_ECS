@@ -3,6 +3,7 @@
 
 health_component::health_component(int baseHealth) : Component()
 {
+  
   currentHealth = baseHealth;
 }
 

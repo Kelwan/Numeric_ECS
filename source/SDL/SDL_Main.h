@@ -27,11 +27,10 @@ public:
     void render();
     void delay(Uint32 ms);
 
+    SDL_Renderer* renderer = nullptr;   
+
 private:
     
-
     SDL_Window* win = nullptr;
-    SDL_Renderer* renderer = nullptr;    
-
 
 };

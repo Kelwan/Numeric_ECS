@@ -22,11 +22,12 @@ poison_system::~poison_system()
 
 void poison_system::process(Entity& entity, std::vector<Component_Container*> components)
 {
-  Component* component = components[0]->component;
+  
+  Component* component = components[1]->component;
   
   auto* healthComponent = reinterpret_cast<health_component*>(component);
   healthComponent->subtractHealth(this->get_damage());
-  std::cout << healthComponent->getHealth() << std::endl;
+  std::cout << "Health: " << healthComponent->getHealth() << std::endl;
 }
 
 

@@ -10,7 +10,6 @@ class SDL_Game : public Game
 public:
     SDL_Main sdl;
 
-
 };
 
 
@@ -26,15 +25,18 @@ int main(int argc, char* argv[])
     player.add_component<health_component>(100);
     player.add_component<poison_component>();
     player.add_component<position_component>(20.0f, 20.0f);
+    player.add_component<SDL_BMP_Component>("smiles.bmp");
 
     rock.add_component<health_component>(100);
     rock.add_component<poison_component>();
     rock.add_component<position_component>(20.0f, 20.0f);
+    rock.add_component<SDL_BMP_Component>("frowns.bmp");
 
     //player.printComponents();
 
     simpleGame.system_manager.add_system<health_system>();
     simpleGame.system_manager.add_system<poison_system>(2);
+    simpleGame.system_manager.add_system<SDL_Render>(simpleGame.sdl.renderer);
 
     simpleGame.entity_manager.add_entity(player);
     simpleGame.entity_manager.add_entity(rock);

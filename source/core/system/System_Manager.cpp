@@ -22,66 +22,29 @@ void System_Manager::_processentity(Entity& entity, System* system_process)
 {
   Component_Container* component_container = nullptr;
   
-  int component_count = 0;
-
-  bool isFound = false;
-
-  if(system_process->components_for_process.size() == 0)
-  {
-    isFound = true;
-  }
+  std::vector<Component_Container*> foundComponents;
 
   for(auto component_name : system_process->components_for_process) {
-    component_container = system_process->search_for_component_type
-    (entity, component_name, component_count);
+    component_container = system_process->search_for_component_type(
+      entity, component_name
+    );
 
-
-    if(component_container != nullptr 
-    && component_count == system_process->components_for_process.size()) {
-      isFound = true;
+    if(component_container != nullptr) {
+      foundComponents.push_back(component_container);
     }
-
   }
   
-  if(isFound) {
-    system_process->process(entity, entity.components);
+  if(system_process->components_for_process.size() == foundComponents.size()) {
+    system_process->process(entity, foundComponents);
   }
+
 }
 
   void System_Manager::_processallentities(std::vector<Entity*>& stored_entities,
   System* system_process)
   {
-    std::cout << stored_entities.size() << std::endl;
-    for(auto& entity : stored_entities)
+    for(Entity* entity : stored_entities)
     {
-      std::cout << "process_all_entites loop started!" << std::endl;
-      Component_Container* component_container = nullptr;
-    
-      int component_count = 0;
-
-      bool isFound = false;
-
-      if(system_process->components_for_process.size() == 0)
-      {
-        isFound = true;
-      }
-
-      for(auto component_name : system_process->components_for_process) {
-        component_container = system_process->search_for_component_type
-        (*entity, component_name, component_count);
-
-
-        if(component_container != nullptr 
-        && component_count 
-        == system_process->components_for_process.size()) 
-        {
-          isFound = true;
-        }
-      }
-      
-      if(isFound) {
-        system_process->process(*entity, entity->components);
-      }
-      
+      _processentity(*entity, system_process);
     }
   }
