@@ -14,7 +14,7 @@ void health_system::process(Entity& entity, std::vector<Component_Container*> co
 
     if(healthComponent->getHealth() <= 0)
     {
-        std::cout << "character is dead!";
+        std::cout << "character is dead!" << std::endl;
     }
     
 }

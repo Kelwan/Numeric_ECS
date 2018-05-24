@@ -20,6 +20,10 @@ public:
 
   void frameRate();
 
+  inline int get_vector_size()
+  {
+    return stored_entities.size();
+  };
 
 private:
 

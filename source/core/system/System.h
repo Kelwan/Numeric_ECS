@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <string>
 
+#include "./source/core/component/Component.h"
 #include "./source/core/entity/Entity.h"
 
 
@@ -16,7 +17,7 @@ public:
 
   std::string name;
 
-  Component_Container* search_for_component_type(Entity entity, std::string target, int& component_count);
+  Component_Container* search_for_component_type(Entity& entity, std::string target, int& component_count);
 
 
   std::vector<std::string> components_for_process;

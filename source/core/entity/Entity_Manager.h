@@ -19,6 +19,7 @@ public:
 
 private:
 
+    friend class System_Manager;
     friend class Game;
     friend class entity_iterator;
     std::vector<Entity*> stored_entities;
