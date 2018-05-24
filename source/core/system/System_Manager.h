@@ -47,7 +47,17 @@ _addsystem(new systemT{systemArgs...});
         _processallentities(entity_manager.stored_entities, system_process);
         
       }
+    }
+  }
 
+    inline void process_all_entities_type(Entity_Manager& entity_manager, std::string target)
+  {
+    for (System* specific_system : stored_systems)
+    {
+      if (specific_system->name == target)
+      {
+        _processallentities(entity_manager.stored_entities, specific_system); 
+      }
     }
   }
 
@@ -62,6 +72,5 @@ private:
                            System* system_process);
   void _addsystem(System* storeSystem);
   std::vector<System*> stored_systems;
-
 
 };
