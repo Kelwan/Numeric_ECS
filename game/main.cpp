@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 
     SDL_Game simpleGame;
     Entity player;
-    Entity rock;
+    // Entity rock;
 
 
     //player.add_component<health_component>(100);
@@ -38,7 +38,11 @@ int main(int argc, char* argv[])
 
     simpleGame.system_manager.add_system<SDL_Render>(simpleGame.sdl.renderer);
 
+    player.add_component<SDL_BMP_Component>("smiles.bmp");
+    player.add_component<SDL_Rect_Component>(0, 0, 100, 100);
+
     
+
 
 
 
