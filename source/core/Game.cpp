@@ -3,7 +3,6 @@
 #include <chrono>
 
 
-
 Game::Game()
 {
 
@@ -29,3 +28,21 @@ bool Game::run()
 
   return true;
 }
+
+void Game::turn()
+{
+  std::cout << "Welcome to a brand new day in the beauty of simple turn-based conquest" << std::endl;
+  std::cout << "You have four options, what will you choose?" << std::endl;
+
+  for(Entity* entity : entity_manager.stored_entities) {
+    system_manager.process_entity(*entity);
+  }
+
+
+
+}
+
+//void Game::get_input(std::stringstream input)
+//{
+
+//}

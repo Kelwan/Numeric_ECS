@@ -54,6 +54,7 @@
         "xthread": "cpp",
         "xfunctional": "cpp",
         "mutex": "cpp",
-        "condition_variable": "cpp"
+        "condition_variable": "cpp",
+        "__locale": "cpp"
     }
 }

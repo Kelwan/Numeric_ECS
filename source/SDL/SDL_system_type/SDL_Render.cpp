@@ -31,7 +31,5 @@ void SDL_Render::process(Entity& entity, std::vector<Component_Container*> compo
 
     //SDL_RenderCopy(SDL_Render::ren, bmp_component->texture, rect_component->SrcR, rect_component->DestR);
     SDL_RenderPresent(SDL_Render::ren);
-
-    
-    
+   
 }
