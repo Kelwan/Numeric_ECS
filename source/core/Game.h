@@ -1,6 +1,8 @@
 #pragma once
 
 #include <memory>
+#include <iostream>
+#include <sstream>
 #include "./entity/Entity_Manager.h"
 #include "./system/System_Manager.h"
 
@@ -12,13 +14,16 @@ public:
 
   void add_system();
   void add_entity();
+  void optionsTemplate(std::string one, std::string two, std::string three, std::string four);
+
+  //void get_input(std::stringstream input);
 
   bool run();
 
   System_Manager system_manager;
   Entity_Manager entity_manager;
 
-  void frameRate();
+  void turn();
 
   inline int get_vector_size()
   {
@@ -27,8 +32,7 @@ public:
 
 private:
 
-
-
+  
   //void duplicate_entity();
   std::vector<System*> stored_systems;
   std::vector<Entity> stored_entities;

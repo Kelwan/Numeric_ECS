@@ -33,9 +33,7 @@ _addsystem(new systemT{systemArgs...});
       {
         _processentity(entity, system_process);
       }
-
     }
-    
   };
 
   inline void process_all_entities(Entity_Manager& entity_manager)

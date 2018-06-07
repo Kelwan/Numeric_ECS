@@ -45,11 +45,11 @@ public:
 
   void printComponents();
 
-
+  std::vector<Component_Container*> components;
 
 private:
 
-  std::vector<Component_Container*> components;
+ 
 
 
   iterator::entity_id _entityid = 0;
