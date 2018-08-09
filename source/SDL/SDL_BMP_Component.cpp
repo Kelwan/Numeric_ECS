@@ -1,12 +1,16 @@
-#include "SDL_BMP_Component.h"
+#include "sdl_bmp_component.h"
 
-SDL_BMP_Component::SDL_BMP_Component(const char* bmp_to_load)
+sdl_bmp_component::sdl_bmp_component(const char* bmp_to_load)
 {
     surface = SDL_LoadBMP(bmp_to_load);
+
+    if(surface == NULL)
+    {
+        std::cerr << "SDL_LoadBMP failed to load: " << SDL_GetError() << std::endl;
+    }
 }
 
-void SDL_BMP_Component::changeSurface(const char* new_bmp_to_load)
+void sdl_bmp_component::changeSurface(const char* new_bmp_to_load)
 {
-    
     surface = SDL_LoadBMP(new_bmp_to_load);
 }

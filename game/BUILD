@@ -4,6 +4,6 @@ cc_binary(
     deps =
     [
         "//source/game_systems:ecs_game_systems",
-        "//source/SDL:SDL_Core",
+        "//source/sdl:SDL_Core",
     ],
 )

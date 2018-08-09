@@ -1,7 +1,7 @@
 #include "./source/core/core.h"
 #include "sdl.h"
 
-class SDL_BMP_Component : public Component
+class sdl_bmp_component : public Component
 {
 public:
 
@@ -9,11 +9,11 @@ public:
     SDL_Texture* texture = nullptr;
 
 
-    SDL_BMP_Component(const char* bmp_to_load);
+    sdl_bmp_component(const char* bmp_to_load);
 
     static inline const std::string get_component_name()
     {
-        return "SDL_BMP_Component";
+        return "sdl_bmp_component";
     }
 
     void changeSurface(const char* new_bmp_to_load);

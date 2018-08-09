@@ -5,3 +5,5 @@ spell_user_component::spell_user_component(int spellArgs)
 {
     spell_permissions = spellArgs;
 }
+
+

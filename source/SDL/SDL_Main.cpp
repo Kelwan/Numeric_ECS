@@ -1,5 +1,5 @@
 
-#include "SDL_Main.h"
+#include "sdl_main.h"
 #include <iostream>
 
 
